@@ -1,0 +1,128 @@
+// SCSS variables
+$error-color: rgb(226, 42, 42);
+$text-color: rgb(73, 74, 80);
+$label-color: rgb(47, 107, 131);
+
+.Area {
+  box-sizing: border-box;
+  width: 100%;
+  height: 100px;
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  position: relative;
+  overflow: hidden;
+  textarea {
+    width: 100%;
+    height: 100%;
+    color: $text-color;
+    font-size: 16px;
+    border: none;
+    padding-top: 25px;
+    outline: none;
+  }
+  textarea:focus + label > span,
+  textarea:valid + label > span {
+    transform: translateY(-100%);
+    padding-top: 20px;
+    width: 100%;
+    font-size: 14px;
+    color: $label-color;
+  }
+  textarea:focus + label::after,
+  textarea:valid + label::after {
+    transform: translateX(0%);
+  }
+  label {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    border-bottom: 1px solid black;
+    span {
+      position: absolute;
+      top: 20px;
+      left: 0;
+      transition: all 0.3s ease;
+      background-color: white;
+    }
+  }
+  label::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-bottom: 3px solid $label-color;
+    bottom: -1px;
+    left: 0;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+  }
+}
+
+.AreaError {
+  box-sizing: border-box;
+  width: 100%;
+  height: 100px;
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  position: relative;
+  overflow: hidden;
+  textarea {
+    width: 100%;
+    height: 100%;
+    color: $text-color;
+    font-size: 16px;
+    border: none;
+    padding-top: 25px;
+    outline: none;
+  }
+  textarea:focus + label > span,
+  textarea:valid + label > span {
+    transform: translateY(-100%);
+    padding-top: 20px;
+    width: 100%;
+    font-size: 14px;
+    color: $error-color;
+  }
+  textarea:focus + label::after,
+  textarea:valid + label::after {
+    transform: translateX(0%);
+  }
+  label {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    border-bottom: 1px solid $error-color;
+    span {
+      position: absolute;
+      top: 20px;
+      left: 0;
+      transition: all 0.3s ease;
+      background-color: white;
+      color: $error-color;
+    }
+  }
+  label::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    bottom: -1px;
+    left: 0;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+  }
+}
