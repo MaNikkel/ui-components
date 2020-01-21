@@ -1,0 +1,46 @@
+.Button {
+  display: inline-block;
+  width: 100%;
+  padding: 0.7em 1.7em;
+  margin: 0 0.3em 0.3em 0;
+  border-radius: 0.2em;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #ffffff;
+  background-color: #3369ff;
+  box-shadow: inset 0 -0.6em 1em -0.35em rgba(0, 0, 0, 0.17),
+    inset 0 0.6em 2em -0.3em rgba(255, 255, 255, 0.15),
+    inset 0 0 0em 0.05em rgba(255, 255, 255, 0.12);
+  text-align: center;
+  position: relative;
+  outline: none;
+}
+
+.Button:active {
+  box-shadow: inset 0 0.6em 2em -0.3em rgba(0, 0, 0, 0.15),
+    inset 0 0 0em 0.05em rgba(255, 255, 255, 0.12);
+}
+
+.Button:disabled {
+  background-color: #ccc;
+  color: rgb(131, 131, 131);
+  cursor: not-allowed;
+}
+
+.Success {
+  background-color: rgb(69, 141, 62);
+}
+
+.Danger {
+  background-color: rgb(221, 11, 11);
+}
+
+// @media all and (max-width:30em){
+//  a.button7{
+//   display:block;
+//   margin:0.4em auto;
+//  }
+// }
